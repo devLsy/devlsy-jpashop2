@@ -1,0 +1,13 @@
+package devlsyjpashop2.devlsyjpashop2;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class DevlsyJpashop2ApplicationTests {
+
+    @Test
+    void contextLoads() {
+    }
+
+}
