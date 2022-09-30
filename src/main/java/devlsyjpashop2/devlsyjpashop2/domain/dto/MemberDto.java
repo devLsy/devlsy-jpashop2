@@ -22,6 +22,7 @@ public class MemberDto {
      */
     public static MemberDto convertToDto(Member member) {
         return MemberDto.builder()
+                .memberId(member.getMemberId())
                 .memberName(member.getMemberName())
                 .build();
     }
