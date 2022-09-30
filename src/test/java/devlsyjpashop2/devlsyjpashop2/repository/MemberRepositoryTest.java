@@ -1,6 +1,6 @@
 package devlsyjpashop2.devlsyjpashop2.repository;
 
-import devlsyjpashop2.devlsyjpashop2.domain.entity.MemberEntity;
+import devlsyjpashop2.devlsyjpashop2.domain.entity.Member;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,10 +20,10 @@ class MemberRepositoryTest {
     @PostConstruct
     public void initDB() {
         for (int i = 0; i < 30; i++) {
-            MemberEntity memberEntity = MemberEntity.builder()
-                    .name("회원_" + i)
+            Member member = Member.builder()
+                    .memberName("회원_" + i)
                     .build();
-            memberRepository.save(memberEntity);
+            memberRepository.save(member);
         }
     }
 
@@ -42,7 +42,7 @@ class MemberRepositoryTest {
     @Transactional(readOnly = true)
     public void 회원_목록조회() throws Exception {
         //when
-        List<MemberEntity> all = memberRepository.findAll();
+        List<Member> all = memberRepository.findAll();
         //then
         Assertions.assertThat(all.size()).isEqualTo(30);
 
