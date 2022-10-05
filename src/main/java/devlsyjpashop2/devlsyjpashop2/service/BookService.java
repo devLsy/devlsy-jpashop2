@@ -1,9 +1,7 @@
 package devlsyjpashop2.devlsyjpashop2.service;
 
 import devlsyjpashop2.devlsyjpashop2.domain.dto.BookDto;
-import devlsyjpashop2.devlsyjpashop2.domain.dto.MemberDto;
 import devlsyjpashop2.devlsyjpashop2.domain.entity.Book;
-import devlsyjpashop2.devlsyjpashop2.domain.entity.Member;
 import devlsyjpashop2.devlsyjpashop2.repository.BookRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -73,6 +71,18 @@ public class BookService {
         List<BookDto> result = findBooks.stream()
                 .map(book -> toItemDto(book)).collect(toList());
         return result;
+    }
+
+    /**
+     * 상품 수정
+     * @param bookId
+     * @param bookName
+     * @param bookPrice
+     * @param bookStockQuantity
+     */
+    public void updateBook(Long bookId, String bookName, int bookPrice, int bookStockQuantity) {
+//        Optional<Book> findBook = bookRepository.findById(bookId);
+//        나중에 구현
     }
 
 

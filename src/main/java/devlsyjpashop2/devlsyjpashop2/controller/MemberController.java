@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @Slf4j
 @RequiredArgsConstructor
-@RequestMapping("/member")
+@RequestMapping("/members")
 public class MemberController {
 
     private final MemberService memberService;

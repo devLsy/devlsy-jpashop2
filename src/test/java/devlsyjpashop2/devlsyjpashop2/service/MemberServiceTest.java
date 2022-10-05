@@ -26,6 +26,14 @@ class MemberServiceTest {
 //            memberService.join(memberDto);
 //        }
 //    }
+    @Test
+    public void 회원가입() throws Exception{
+        MemberDto memberDto = MemberDto.builder()
+                .memberName("시발")
+                        .build();
+//        memberService.join(memberDto);
+//        assertThat(memberDto.getMemberName()).isEqualTo("시발");
+    }
 
     @Test
     public void 회원목록조회() throws Exception {
@@ -39,11 +47,11 @@ class MemberServiceTest {
     @Test
     public void 회원단건조회() throws Exception {
         //when
-        Long memberId = 20L;
+        Long memberId = 10L;
         MemberDto oneMember = memberService.findOneMember(memberId);
 
         //then
-        assertThat(oneMember.getMemberName()).isEqualTo("member_19");
+        assertThat(oneMember.getMemberName()).isEqualTo("member_10");
     }
 
 

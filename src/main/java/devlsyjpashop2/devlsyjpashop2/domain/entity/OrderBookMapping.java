@@ -10,12 +10,12 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Table(name = "ORDER_BOOK_MAPPING")
-public class OrderBook {
+public class OrderBookMapping {
 
     @Id @GeneratedValue
     @Column(name = "ORDER_BOOK_ID")
     private Long orderItemId;
-    
+
     // 연관관계 주인
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "BOOK_ID")

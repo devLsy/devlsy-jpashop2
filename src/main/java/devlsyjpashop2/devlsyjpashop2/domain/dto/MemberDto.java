@@ -3,12 +3,12 @@ package devlsyjpashop2.devlsyjpashop2.domain.dto;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import devlsyjpashop2.devlsyjpashop2.domain.entity.Member;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Getter @Setter
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class MemberDto {
 
